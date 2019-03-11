@@ -37,4 +37,15 @@ Then la liste ordonnée doit être :
 | false      | LU		 		 | bbbbb					| 2016-12-01T14:03:00Z | 
 | false      | PAS_ENVOYE 		 | aaaaa					| 2017-01-01T14:03:00Z |
 
+Scenario Outline:: Le mail1 n'est pas null, le mail2 est null 
+Given un premier mail avec l'importance "<important1>", le statut "<statut1>", le sujet "<sujet1>" et la date "<date1>"
+Given un second mail avec l'importance "<important2>", le statut "<statut2>", le sujet vide "<sujet2>" et la date "<date2>"
+When je trie
+Then le tri doit retourner "<resu>"
 
+# Le resultat doit être EGAUX
+	
+Examples:
+| important1 | important2 | statut1    | statut2 | sujet1  		    | sujet2        | date1                | date2                | resu  |
+| false       | false	  | LU         | LU      | 			        | bbbbbb 		| 2017-01-01T14:03:00Z | 2017-01-01T14:03:00Z | EGAUX |  
+    
