@@ -71,8 +71,8 @@ Etapes :
 |    Packages    |                  Classes                 |                  Commentaires                  |
 |:--------------:|:----------------------------------------:|:----------------------------------------------:|
 | Commun         |                                          | Pas de classe dans le package  pour le moment  |
-| Domain         | - Mail - MailComparator                  |                                                |
-| Infrastructure | - MailSender                             |                                                |
+| Domain         | - Mail - MailComparator                  | Ancien package Model                           |
+| Infrastructure | - MailSender                             | Ancien package Utils                           |
 | Présentation   | - ClientMail - InterpreteurLigneCommande |                                                |
 | Service        | - MailService                            |                                                |
 
