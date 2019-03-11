@@ -117,6 +117,7 @@ Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de D
 
 1) Compléter la classe `MailComparaisonStep`
 2) Lancer le test `CucumberRunnerTest` en junit
+On constate qu'il y a une erreur lors de l'execution du test; l'erreur provient des données BDD pour cucumber
 3) Ouvrir dans un navigateur `target/cucumber/index.html`
 4) Ajouter des cas de test dans la feature `trier_mail.feature`. Notez qu'aucun nouveau code n'a été nécessaire pour ajouter ces tests contrairement à un TU.
 
