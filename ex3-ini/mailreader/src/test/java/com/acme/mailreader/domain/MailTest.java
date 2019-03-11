@@ -16,7 +16,7 @@ public class MailTest {
 
 	@Test(expected=DateIncorrecteException.class)
 	public final void erreurSiDateAvant1970() throws DateIncorrecteException {
-					
+		Mail mail = new Mail.Builder("Mail test").date(Instant.parse("1900-01-01T00:00:00.00Z")).build();	
 	}
 	
 	@Test
@@ -26,5 +26,12 @@ public class MailTest {
 		assertThat(comparator.compare(mail1, mail2),is(1));
 				
 	}
-
+	
+	//Autres tests
+	
+	@Test(expected=DateIncorrecteException.class)
+	public final void erreurSiDateApres2100() throws DateIncorrecteException {
+		Mail mail = new Mail.Builder("Mail test").date(Instant.parse("2200-01-01T00:00:00.00Z")).build();
+	}
+	
 }
