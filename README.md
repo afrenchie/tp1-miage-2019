@@ -103,6 +103,9 @@ _Temps estimé : 30 mins_
 
 2) Exécuter vos tests si besoin (automatique si vous pratiquez le test continu avec infinitest).
 
+Les tests on été réalisé à la main mais également à l'aide d'infinitest.
+Les tests réalisés sont tous passés.
+
 # Exercice 5 - BDD avec Cucumber-jvm
 _Temps estimé : 40 mins_
 
