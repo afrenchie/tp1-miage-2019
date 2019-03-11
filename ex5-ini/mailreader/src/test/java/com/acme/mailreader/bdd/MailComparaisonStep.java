@@ -1,8 +1,13 @@
 package com.acme.mailreader.bdd;
 
+import java.time.Instant;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.junit.Assert;
+
+import org.hamcrest.core.Is;
 
 import com.acme.mailreader.domain.DateIncorrecteException;
 import com.acme.mailreader.domain.Mail;
@@ -39,26 +44,25 @@ public class MailComparaisonStep {
 	@Given("^un premier mail avec l'importance \"([^\"]*)\", le statut \"([^\"]*)\", le sujet \"([^\"]*)\" et la date \"([^\"]*)\"$")
 	public void un_premier_mail(boolean importance, Statut statut,
 			String sujet, String date) throws DateIncorrecteException {
-		//TODO
+		mail1 = new Mail.Builder(sujet).statut(statut).important(importance).date(Instant.parse(date)).build();
 	}
 
 	@Given("^un second mail avec l'importance \"([^\"]*)\", le statut \"([^\"]*)\", le sujet \"([^\"]*)\" et la date \"([^\"]*)\"$")
 	public void un_second_mail(boolean importance, Statut statut, String sujet,
 			String date) throws DateIncorrecteException {
-		//TODO
+		mail2 = new Mail.Builder(sujet).statut(statut).important(importance).date(Instant.parse(date)).build();
 	}
 
 	
 
 	@When("^je trie$")
 	public void je_trie() throws Throwable {
-		//TODO
+		resultatComparaison = resuAsString.get(comparator.compare(mail1, mail2));
 	}
 
 	@Then("^le tri doit retourner \"([^\"]*)\"$")
 	public void le_tri_doit_retourner(String resu) throws Throwable {
-		//TODO
-		//assertThat(...);
+		Assert.assertThat(resu, Is.is(resultatComparaison));
 	}
 	
 
