@@ -103,12 +103,15 @@ _Temps estimé : 30 mins_
 
 2) Exécuter vos tests si besoin (automatique si vous pratiquez le test continu avec infinitest).
 
+Les tests on été réalisé à la main mais également à l'aide d'infinitest.
+Les tests réalisés sont tous passés.
+
 # Exercice 5 - BDD avec Cucumber-jvm
 _Temps estimé : 40 mins_
 
 Point de synchro : repartir du projet fourni `mailreader-ex5-ini`
 
-cucumber-jvm est l'implémentation java de cucumber, un framework de BDD (Behavioral Driven Development) très populaire. Il est existe d'autres : JBehave (l'original, très similaire), Concordion, JGiven ...
+cucumber-jvm est l'implémentation java de cucumber, un framework de BDD (Behavioral Driven Development) très populaire. Il en existe d'autres : JBehave (l'original, très similaire), Concordion, JGiven ...
 
 Pour les besoins du TP, nous utilisons ici les notions de Scenario Outline, de Data Table et de Transformer permettant l'utilisation de données tabulaires et de formats custom.
 
