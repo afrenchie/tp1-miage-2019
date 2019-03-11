@@ -68,6 +68,14 @@ Etapes :
 * On renomme les packages actuels, exemple : modele en domain
 * Ajout des classes manquantes
 
+|    Packages    |                  Classes                 |                  Commentaires                  |
+|:--------------:|:----------------------------------------:|:----------------------------------------------:|
+| Commun         |                                          | Pas de classe dans le package  pour le moment  |
+| Domain         | - Mail - MailComparator                  |                                                |
+| Infrastructure | - MailSender                             |                                                |
+| Présentation   | - ClientMail - InterpreteurLigneCommande |                                                |
+| Service        | - MailService                            |                                                |
+
 # Exercice 3 - Injection de dépendances avec Guice
 _Temps estimé : 20 mins_
 
