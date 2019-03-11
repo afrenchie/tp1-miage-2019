@@ -1,5 +1,8 @@
 package com.acme.mailreader.service;
 
-public class MailService {
+import com.acme.mailreader.domain.Mail;
 
+public class MailService {
+	void envoyerMail(Mail mail) {
+	}
 }

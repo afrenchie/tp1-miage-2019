@@ -10,7 +10,4 @@ public class ClientMail {
 		sujetMail = String.valueOf(args[1]);
 	}
 	
-	private void nouveauMail() {
-		
-	}
 }
